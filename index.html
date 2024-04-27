@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My To Do List</title>
+</head>
+<body>
+
+    <h1>My daily organizer <span id="animated-emoji" class="emoji">🗃️</span></h1>
+    <div class="flex-container">
+
+        <div class="to-do-container">
+            <h2>To-do List</h2> <span class="emoji">✅</span>
+            <div id="items" >
+                <div id="item">        
+                </div>
+            </div>
+
+            <template id="item-template">
+                <input type="checkbox" class="item-completed">
+                <input type="text" class="item-description" placeholder="To-Do item...">
+            </template>
+            <button id="add">Add an item</button>
+            <button id="reset-all">Reset Everything</button>
+        </div>
+
+        <div class="weather-info-container">
+            <div id="weather-div">
+                <h2>Weather and Time</h2> <span class="emoji">⛅🕒</span>
+                <p>Temperature in °C: <span id="temp-celsius"></span> 
+                   <p>Feels like:<span id="feels-celsius"></span></p>
+                </p>
+
+                <p></span></p>
+                <p>Temperature in °F: <span id="temp-fahrenheit"></span>
+                    <p>Feels like: <span id="feels-fahrenheit"></span> </p> 
+                </p>
+
+                <p>Location: <span id="city"></span>, <span id="country"></span></p>
+
+                <div class="clock-container">
+                  <p>System Time: <span id="clock">Local Time: </span></p>
+                    
+                    
+                </div>
+                <div class="date-div">
+                    <p>Today's date is: <span id="current-date"></span></p>
+                </div>
+           
+                
+                  
+            </div>
+
+        </div>
+
+        
+        <div class="sticky-container">
+            <h2>Sticky Note Pad</h2><span class="emoji">📝</span>
+            <div id="sticky-notes">
+         
+                <textarea class="note" placeholder="Empty sticky note / Double click to delete a note"></textarea>
+          
+                <button id="add-note" type="button">Add another note</button>
+            </div>
+       
+    </div>
+
+
+   
+    <script src="main.js" defer></script>
+    
+</body>
+</html>
