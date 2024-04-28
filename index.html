@@ -7,8 +7,11 @@
     <title>My To Do List</title>
 </head>
 <body>
-
-    <h1>My daily organizer <span id="animated-emoji" class="emoji">🗃️</span></h1>
+    <div class="header-container">
+        <h1>My daily organizer <span id="animated-emoji" class="emoji">🗃️</span></h1>
+        <button id="dark-mode">Dark Mode: Off 🔴</button>
+    </div>
+    
     <div class="flex-container">
 
         <div class="to-do-container">
@@ -29,24 +32,24 @@
         <div class="weather-info-container">
             <div id="weather-div">
                 <h2>Weather and Time</h2> <span class="emoji">⛅🕒</span>
-                <p>Temperature in °C: <span id="temp-celsius"></span> 
-                   <p>Feels like:<span id="feels-celsius"></span></p>
+                <p>Temperature in °C: <span class="info" id="temp-celsius"></span> 
+                   <p>Feels like:<span class="info"  id="feels-celsius"></span></p>
                 </p>
 
                 <p></span></p>
-                <p>Temperature in °F: <span id="temp-fahrenheit"></span>
-                    <p>Feels like: <span id="feels-fahrenheit"></span> </p> 
+                <p>Temperature in °F: <span class="info" id="temp-fahrenheit"></span>
+                    <p>Feels like: <span class="info" id="feels-fahrenheit"></span> </p> 
                 </p>
 
-                <p>Location: <span id="city"></span>, <span id="country"></span></p>
+                <p>Location: <span class="info" id="city"></span>, <span class="info" id="country"></span></p>
 
                 <div class="clock-container">
-                  <p>System Time: <span id="clock">Local Time: </span></p>
+                  <p>System Time: <span class="info" id="clock">Local Time: </span></p>
                     
                     
                 </div>
                 <div class="date-div">
-                    <p>Today's date is: <span id="current-date"></span></p>
+                    <p>Today's date is: <span class="info" id="current-date"></span></p>
                 </div>
            
                 

@@ -302,5 +302,60 @@ function deleteNote(id, element) {
 console.log(notesContainer);
 console.log(addNoteButton);
 
+// Dark mode feature 
+
+
+const buttonStatus = document.getElementById('dark-mode');
+  
+
+function toggleDarkMode() {
+    const body = document.body;
+    const spans = document.getElementsByClassName('info');
+
+
+    body.classList.toggle('dark-mode');
+
+    for (const span of spans) {
+        span.classList.toggle('info-dark-mode');
+    }
+
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode); 
+
+    if (isDarkMode) {
+        buttonStatus.innerHTML = '🟢 Dark Mode: On';
+    
+    } else {
+        buttonStatus.innerHTML = '🔴 Dark Mode: Off'; 
+        //buttonStatus.style.color = 'rgb(255, 255, 255)'
+    }
+};
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        const spans = document.getElementsByClassName('info');
+
+        for (const span of spans) {
+            span.classList.add('info-dark-mode');
+        }
+    }
+
+    if (isDarkMode) {
+        buttonStatus.innerHTML = '🟢 Dark Mode: On';
+    } else {
+        buttonStatus.innerHTML = '🔴 Dark Mode: Off'; 
+    }
+
+   
+});
+
+darkModeOn = document.getElementById('dark-mode');
+darkModeOn.addEventListener('click', toggleDarkMode);
+
 
 
