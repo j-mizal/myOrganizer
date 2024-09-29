@@ -258,7 +258,33 @@ h1 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     justify-self: center;
-    
+    margin-left: 0px;
+
+}
+
+#sticky-title {
+    margin-left: 0px;
+}
+
+.sticky-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-container span {
+    display: none;
+}
+
+.sticky-container h2 {
+    align-self: center;
+}
+
+#add-note {
+    margin-bottom: 10px;
+}
+
+#add-note {
+    margin-left: 0px;
 }
 
 .weather-info-container {
@@ -282,6 +308,11 @@ h1 {
 
 #current-day {
     margin-top: 10px;
+}
+
+#add {
+ 
+    margin-left: 20px;
 }
 
 
