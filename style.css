@@ -315,6 +315,13 @@ h1 {
     margin-left: 20px;
 }
 
+.item-description {
+
+    width: 350px;
+    height: 60px;
+    font-size: 1.15rem;
+    letter-spacing: .09px;
+}
 
 };
 
