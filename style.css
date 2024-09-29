@@ -287,6 +287,14 @@ h1 {
     margin-left: 0px;
 }
 
+.note {
+    height: 275px;
+    width: 310px;
+    box-sizing: border-box;
+    
+    
+}
+
 .weather-info-container {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -317,10 +325,21 @@ h1 {
 
 .item-description {
 
-    width: 350px;
+    width: 325px;
     height: 60px;
     font-size: 1.15rem;
     letter-spacing: .09px;
+}
+
+#sticky-notes {
+   
+    padding: 0px;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.emoji {
+    display: none;
 }
 
 };
