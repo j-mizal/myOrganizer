@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header-container">
-        <h1>My daily organizer <span id="animated-emoji" class="emoji">🗃️</span></h1>
+        <h1>My daily planner <p id="current-day"></p></h1>
         <button id="dark-mode">🔴 Dark Mode: Off</button>
     </div>
     
@@ -31,7 +31,7 @@
 
         <div class="weather-info-container">
             <div id="weather-div">
-                <h2>Weather and Time</h2> <span class="emoji">⛅🕒</span>
+                <h2>Temperature and Time</h2> <span class="emoji">🕒🌡️</span>
                 <p>Temperature in °C: <span class="info" id="temp-celsius"></span> 
                    <p>Feels like:<span class="info"  id="feels-celsius"></span></p>
                 </p>
@@ -60,12 +60,13 @@
 
         
         <div class="sticky-container">
-            <h2>Sticky Note Pad</h2><span class="emoji">📝</span>
+            <h2 id="sticky-title">Sticky Note Pad</h2><span class="emoji">📝</span>
+            <button id="add-note" type="button">Add note</button>
             <div id="sticky-notes">
          
+                
                 <textarea class="note" placeholder="Empty sticky note / Double click to delete a note"></textarea>
           
-                <button id="add-note" type="button">Add another note</button>
             </div>
        
     </div>

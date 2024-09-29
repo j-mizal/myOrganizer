@@ -197,7 +197,14 @@ function displayTime() {
     const formattedTime = new Intl.DateTimeFormat('en-US', options).format(now);
 
     document.getElementById('clock').textContent = formattedTime;
+
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDay = now.getDay();
+    document.getElementById('current-day').textContent = `Today is ${daysOfWeek[currentDay]}`;
 }
+
+
+
 
 const currentDateElement =   document.getElementById('current-date');
 
@@ -223,7 +230,7 @@ const addNoteButton = document.getElementById('add-note');
 
 getNotes().forEach((note) => {
     const noteElement = createNoteElement(note.id, note.content);
-    notesContainer.insertBefore(noteElement, addNoteButton);
+    notesContainer.appendChild(noteElement);
 });
 
 addNoteButton.addEventListener('click', () => addNote());
@@ -243,10 +250,11 @@ function createNoteElement(id, content) {
     const element = document.createElement('textarea');
 
     element.classList.add('note');
+     element.style.display = 'block';
     element.value = content;
     element.placeholder = 'Empty sticky note / Double click to delete a note';
 
-    element.addEventListener('change', ()=> {
+    element.addEventListener('input', ()=> {
         updateNote(id, element.value);
     });
 
@@ -268,8 +276,8 @@ function addNote() {
         content: ''
     };
 
-    const noteElement = createNoteElement(noteObject.id, noteObject.content)
-    notesContainer.insertBefore(noteElement, addNoteButton);
+    const noteElement = createNoteElement(noteObject.id, noteObject.content);
+    notesContainer.appendChild(noteElement);
     //addNoteButton.innerHTML = 'Add another note here..';
 
     notes.push(noteObject);
@@ -354,8 +362,5 @@ document.addEventListener('DOMContentLoaded', function() {
    
 });
 
-darkModeOn = document.getElementById('dark-mode');
-darkModeOn.addEventListener('click', toggleDarkMode);
-
-
-
+const darkModeOn = document.getElementById('dark-mode');
+darkModeOn.addEventListener('click',toggleDarkMode);
